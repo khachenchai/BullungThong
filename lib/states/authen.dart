@@ -27,7 +27,10 @@ class _AuthenState extends State<Authen> {
           child: ListView(
             padding: EdgeInsets.all(15),
             children: <Widget>[
-              ShowImage(path: MyConstant.image2, height: 150, width: 150),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: ShowImage(path: MyConstant.image2, height: 150, width: 150),
+              ),
               Padding(
                 padding: const EdgeInsets.only(top: 10, bottom: 10),
                 child: ShowTitle(
