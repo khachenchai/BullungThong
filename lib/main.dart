@@ -1,4 +1,5 @@
 import 'package:bullung_thong/states/authen.dart';
+import 'package:bullung_thong/states/profile.dart';
 import 'package:bullung_thong/states/terms.dart';
 import 'package:bullung_thong/utility/my_constant.dart';
 import 'package:flutter/material.dart';
@@ -7,12 +8,13 @@ import 'package:flutter/material.dart';
 final Map<String, WidgetBuilder> map = {
   '/authen': (BuildContext context) => Authen(),
   '/terms': (BuildContext context) => Terms(),
+  '/profile': (BuildContext context) => Profile(),
 };
 
 String? initialRoute;
 
 void main() {
-  initialRoute = MyConstant.routeAuthen;
+  initialRoute = MyConstant.routeProfile;
   runApp(MyApp());
 }
 

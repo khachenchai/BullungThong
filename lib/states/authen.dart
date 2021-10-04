@@ -88,8 +88,8 @@ InkWell buildGoogle() {
             children: [
               ShowImage(
                 path: MyConstant.googleImg,
-                height: 30,
-                width: 30,
+                height: 40,
+                width: 40,
               ),
               SizedBox(width: 15),
               Text(
@@ -123,9 +123,9 @@ InkWell buildFacebook() {
             // mainAxisAlignment: MainAxisAlignment.start,
             children: [
               ShowImage(
-                path: MyConstant.facebookImg,
-                height: 30,
-                width: 30,
+                path: MyConstant.facebookImg2,
+                height: 40,
+                width: 40,
               ),
               SizedBox(width: 15),
               Text(
@@ -183,8 +183,8 @@ InkWell buildPhoneNumber() {
             children: [
               ShowImage(
                 path: MyConstant.callImg,
-                height: 20,
-                width: 20,
+                height: 30,
+                width: 30,
               ),
               SizedBox(width: 15),
               Text(

@@ -8,12 +8,14 @@ class MyConstant {
   //Route
   static String routeAuthen = '/authen';
   static String routeTerms = '/terms';
+  static String routeProfile = '/profile';
 
   //Image
   static String image1 = 'images/image1.png';
   static String image2 = 'images/image2.png';
   static String googleImg = 'images/google.png';
   static String facebookImg = 'images/facebook.png';
+  static String facebookImg2 = 'images/facebook2.png';
   static String callImg = 'images/call.png';
 
   //Color
