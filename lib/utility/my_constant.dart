@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MyConstant {
+  
   //General
   static String appName = 'BullungThong';
 
@@ -9,6 +10,7 @@ class MyConstant {
   static String routeAuthen = '/authen';
   static String routeTerms = '/terms';
   static String routeProfile = '/profile';
+  static String routeHomePage = '/homepage';
 
   //Image
   static String image1 = 'images/image1.png';
@@ -86,5 +88,17 @@ class MyConstant {
     fontSize: 16,
     color: Colors.black,
     decoration: TextDecoration.underline
+  );
+
+  TextStyle customStyle(double size, Color color, TextDecoration decoration) => TextStyle(
+    fontSize: size,
+    color: color,
+    decoration: decoration
+  );
+
+  TextStyle customKanitStyle(double size, Color color, TextDecoration decoration) => GoogleFonts.kanit(
+    fontSize: size,
+    color: color,
+    decoration: decoration
   );
 }

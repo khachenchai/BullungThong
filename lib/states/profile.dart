@@ -44,7 +44,7 @@ class _ProfileState extends State<Profile> {
                               text: "Khachenchai",
                               textStyle: MyConstant().h1Style()),
                           ShowTitle(
-                              text: "Khachenchai",
+                              text: "Developer",
                               textStyle: MyConstant().h2Style()),
                         ],
                       ),
@@ -67,6 +67,7 @@ class _ProfileState extends State<Profile> {
                 ],
               ),
               buildHistory(),
+              buildHistory()
             ],
           ),
         ),
@@ -96,7 +97,7 @@ class _ProfileState extends State<Profile> {
 
   Padding buildHistory() {
     return Padding(
-      padding: const EdgeInsets.only(top: 35, bottom: 20),
+      padding: const EdgeInsets.only(top: 20),
       child: Container(
         decoration: BoxDecoration(
             color: Colors.red[300]!.withOpacity(0.7),

@@ -1,4 +1,5 @@
 import 'package:bullung_thong/states/authen.dart';
+import 'package:bullung_thong/states/homepage.dart';
 import 'package:bullung_thong/states/profile.dart';
 import 'package:bullung_thong/states/terms.dart';
 import 'package:bullung_thong/utility/my_constant.dart';
@@ -9,12 +10,20 @@ final Map<String, WidgetBuilder> map = {
   '/authen': (BuildContext context) => Authen(),
   '/terms': (BuildContext context) => Terms(),
   '/profile': (BuildContext context) => Profile(),
+  '/homepage': (BuildContext context) => HomePage(),
 };
+//Option
+// final Map<String, TextDecoration> customTextChoices = {
+//       'none': TextDecoration.none,
+//       'underl': TextDecoration.underline,
+//       'overl': TextDecoration.overline,
+//       'lt': TextDecoration.lineThrough,
+//   };
 
 String? initialRoute;
 
 void main() {
-  initialRoute = MyConstant.routeProfile;
+  initialRoute = MyConstant.routeHomePage;
   runApp(MyApp());
 }
 
