@@ -5,6 +5,7 @@ class MyConstant {
   
   //General
   static String appName = 'BullungThong';
+  static String _loginHero = 'login';
 
   //Route
   static String routeAuthen = '/authen';
