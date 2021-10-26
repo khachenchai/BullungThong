@@ -5,13 +5,14 @@ class MyConstant {
   
   //General
   static String appName = 'BullungThong';
-  static String _loginHero = 'login';
+  static String loginHero = 'login';
 
   //Route
   static String routeAuthen = '/authen';
   static String routeTerms = '/terms';
   static String routeProfile = '/profile';
   static String routeHomePage = '/homepage';
+  static String routeTuyen = '/fortuyen';
 
   //Image
   static String image1 = 'images/image1.png';

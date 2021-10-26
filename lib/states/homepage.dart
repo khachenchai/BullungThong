@@ -40,10 +40,13 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.only(top: 100),
             child: Center(
-              child: ShowTitle(
-                  text: "บัลลังก์ทอง",
-                  textStyle: MyConstant()
-                      .customKanitStyle(36, Colors.black, TextDecoration.none)),
+              child: Hero(
+                tag: 'authen',
+                child: ShowTitle(
+                    text: "บัลลังก์ทอง",
+                    textStyle: MyConstant()
+                        .customKanitStyle(36, Colors.black, TextDecoration.none)),
+              ),
             ),
           ),
           Padding(

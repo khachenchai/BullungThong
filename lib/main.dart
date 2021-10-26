@@ -1,5 +1,6 @@
 import 'package:bullung_thong/states/authen.dart';
 import 'package:bullung_thong/states/homepage.dart';
+import 'package:bullung_thong/states/pp.dart';
 import 'package:bullung_thong/states/profile.dart';
 import 'package:bullung_thong/states/terms.dart';
 import 'package:bullung_thong/utility/my_constant.dart';
@@ -11,6 +12,7 @@ final Map<String, WidgetBuilder> map = {
   '/terms': (BuildContext context) => Terms(),
   '/profile': (BuildContext context) => Profile(),
   '/homepage': (BuildContext context) => HomePage(),
+  '/fortuyen': (BuildContext context) => ForTuyen(),
 };
 //Option
 // final Map<String, TextDecoration> customTextChoices = {

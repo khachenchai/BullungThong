@@ -15,53 +15,58 @@ class _AuthenState extends State<Authen> {
   bool _toggled = true;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: MyConstant.bgColor,
-      body: SafeArea(
-        child: Container(
-          margin: EdgeInsets.only(top: 45),
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(22), topRight: Radius.circular(22)),
-              color: Colors.white),
-          child: ListView(
-            padding: EdgeInsets.all(15),
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: ShowImage(path: MyConstant.image2, height: 150, width: 150),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10, bottom: 10),
-                child: ShowTitle(
-                  text: "ลงชื่อเข้าใช้",
-                  textStyle: MyConstant().kanitH1Style()
-                ),
-              ),
-              buildGoogle(),
-              buildFacebook(),
-              buildIndent(),
-              buildPhoneNumber(),
-              Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: SwitchListTile(
-                  controlAffinity: ListTileControlAffinity.leading,
-                  title: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      ShowTitle(text: "ฉันยอมรับ", textStyle: GoogleFonts.kanit(fontSize: 15, color: Colors.black)),
-                      TextButton(onPressed: () => Navigator.pushNamed(context, MyConstant.routeTerms), child: ShowTitle(text: "ข้อตกลงในการใช้ซอฟต์แวร์ ", textStyle: GoogleFonts.kanit(fontSize: 15, color: Color(0xffae46ff), decoration: TextDecoration.underline)),)
-                    ],
-                  ),
-                  value: _toggled,
-                  onChanged: (bool value) {
-                    setState(() => _toggled = value);
-                  }
-                ),
-              )
-            ],
+    return GestureDetector(
+            onTap: () => FocusScope.of(context).requestFocus(FocusNode()),
+            child: Hero(
+              tag: 'authen',
+              child: buildPageAuthen(context),
+            ),
+      );
+  }
+
+  Container buildPageAuthen(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 45),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(22), topRight: Radius.circular(22)),
+          color: Colors.white),
+      child: ListView(
+        padding: EdgeInsets.all(15),
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: ShowImage(path: MyConstant.image2, height: 150, width: 150),
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.only(top: 10, bottom: 10),
+            child: ShowTitle(
+              text: "ลงชื่อเข้าใช้",
+              textStyle: MyConstant().kanitH1Style()
+            ),
+          ),
+          buildGoogle(),
+          buildFacebook(),
+          buildIndent(),
+          buildPhoneNumber(),
+          Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: SwitchListTile(
+              controlAffinity: ListTileControlAffinity.leading,
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  ShowTitle(text: "ฉันยอมรับ", textStyle: GoogleFonts.kanit(fontSize: 15, color: Colors.black)),
+                  TextButton(onPressed: () => Navigator.pushNamed(context, MyConstant.routeTerms), child: ShowTitle(text: "ข้อตกลงในการใช้ซอฟต์แวร์ ", textStyle: GoogleFonts.kanit(fontSize: 15, color: Color(0xffae46ff), decoration: TextDecoration.underline)),)
+                ],
+              ),
+              value: _toggled,
+              onChanged: (bool value) {
+                setState(() => _toggled = value);
+              }
+            ),
+          )
+        ],
       ),
     );
   }
@@ -69,38 +74,38 @@ class _AuthenState extends State<Authen> {
 
 InkWell buildGoogle() {
   return InkWell(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 8, 20, 8),
-        child: Container(
-          decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.grey, blurRadius: 10, offset: Offset(0, 10))
-              ],
-              borderRadius: BorderRadius.all(
-                Radius.circular(22),
-              ),
-              color: Color(0xfff2f2f2)),
-          padding: EdgeInsets.all(8.0),
-          height: 60,
-          child: Row(
-            // mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              ShowImage(
-                path: MyConstant.googleImg,
-                height: 40,
-                width: 40,
-              ),
-              SizedBox(width: 15),
-              Text(
-                "Sign in with Google",
-                style: MyConstant().h2Style(),
-              )
+    child: Padding(
+      padding: const EdgeInsets.fromLTRB(20, 8, 20, 8),
+      child: Container(
+        decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.grey, blurRadius: 10, offset: Offset(0, 10))
             ],
-          ),
+            borderRadius: BorderRadius.all(
+              Radius.circular(22),
+            ),
+            color: Color(0xfff2f2f2)),
+        padding: EdgeInsets.all(8.0),
+        height: 60,
+        child: Row(
+          // mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            ShowImage(
+              path: MyConstant.googleImg,
+              height: 40,
+              width: 40,
+            ),
+            SizedBox(width: 15),
+            Text(
+              "Sign in with Google",
+              style: MyConstant().h2Style(),
+            )
+          ],
         ),
       ),
-      onTap: () => {print("object")});
+    ),
+    onTap: () => {print("object")});
 }
 
 InkWell buildFacebook() {
